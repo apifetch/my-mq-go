@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"time"
 	"whl/rabbit"
@@ -26,7 +25,8 @@ func (Test) Register() *rabbit.QueueExchange {
 func (Test) HandleMessage(msg []byte) error {
 	time.Sleep(20 * time.Second)
 	fmt.Println(1, string(msg))
-	return errors.New("ss")
+	//return errors.New("ss")
+	return nil
 }
 
 type Test2 struct {
